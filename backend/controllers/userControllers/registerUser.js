@@ -1,7 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcryptjs");
-const User = require("../models/userModel");
-const generateToken = require("../utilities/generateToken");
+const User = require("../../models/userModel");
+const generateToken = require("../../utilities/generateToken");
 
 // @desc    Register a new user
 // @route   POST api/user/register
@@ -21,6 +21,17 @@ const registerUser = asyncHandler(async (req, res) => {
   if (userExist) {
     res.status(400);
     throw new Error("User already exist!");
+  }
+
+  // check if password matches the regex
+  if (
+    !password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/)
+  ) {
+    res.status(400);
+    throw new Error(`Password must be more than 8 chars,
+			have at least one number, 
+      at least one special character(!@#$%^&*), 
+      at least one uppercase and one lowercase.`);
   }
 
   // hash password
