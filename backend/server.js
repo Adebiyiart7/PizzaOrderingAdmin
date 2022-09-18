@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // routes
 app.use("/api/user", require("./routes/userRoutes"));
+app.use("/api/products", require("./routes/productRoutes"));
 
 // error middleware
 app.use(errorMiddleware);
@@ -27,6 +28,12 @@ app.listen(port, () => console.log(`Server running on port ${port}`));
  *
  * Initialize a Node Application
  * Create Database Models
- * User controller
+ * User controller; Register user, login user, get me
+ * Added authMiddleware for protected routes
+ *
+ * Get Products
+ * Add Product, check if user is an admin
+ * Update Product, check if user is an admin
+ * Delete Product, check if user is an admin
  *
  */
