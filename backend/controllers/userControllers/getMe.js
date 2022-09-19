@@ -16,8 +16,7 @@ const getMe = asyncHandler(async (req, res) => {
   }
 
   // return the user details
-  res.status(200);
-  res.json({
+  res.status(200).json({
     id: user.id,
     email: user.email,
   });

@@ -21,8 +21,7 @@ const loginUser = asyncHandler(async (req, res) => {
   const user = await User.findOne({ email });
 
   if (user && (await bcrypt.compare(password, user.password))) {
-    res.status(200);
-    res.json({
+    res.status(200).json({
       token: generateToken(user.id),
     });
   } else {

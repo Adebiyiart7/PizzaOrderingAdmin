@@ -19,8 +19,7 @@ const getProduct = asyncHandler(async (req, res) => {
       rating: 1,
     });
 
-    res.status(200);
-    res.json(products);
+    res.status(200).json(products);
   } catch (error) {
     res.status(400);
     throw new Error("Unable to query products.");

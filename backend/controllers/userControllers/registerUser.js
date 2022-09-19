@@ -46,8 +46,7 @@ const registerUser = asyncHandler(async (req, res) => {
     password: hashPassword,
   });
 
-  res.status(200);
-  res.json({
+  res.status(200).json({
     token: generateToken(user.id), // return the token
   });
 });
