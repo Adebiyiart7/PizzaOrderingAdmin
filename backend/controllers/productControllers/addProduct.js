@@ -3,6 +3,7 @@ const Product = require("../../models/productModel");
 const addProductValidator = require("../../utilities/validators/addProductValidator");
 
 const addProduct = asyncHandler(async (req, res) => {
+  // get all input
   let { name, price, category, displayImage, images, description } = req.body;
 
   // check if user is an admin

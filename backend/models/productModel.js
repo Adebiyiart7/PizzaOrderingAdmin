@@ -32,11 +32,15 @@ const productSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    stars: {
+    sumOfStars: {
       type: Number,
     },
     numberOfRatings: {
       type: Number,
+    },
+    rating: {
+      type: Number,
+      default: 0,
     },
   },
   {

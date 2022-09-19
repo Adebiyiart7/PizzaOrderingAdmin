@@ -1,6 +1,11 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../../models/userModel");
 
+/**
+ * @desc    Get the current user details
+ * @route   GET api/user/me
+ * @access  Private
+ */
 const getMe = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user.id);
 
