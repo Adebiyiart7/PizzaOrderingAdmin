@@ -1,5 +1,6 @@
 import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
+
 import "../productsDisplay/ProductsDisplay.css";
 
 const Side = () => {

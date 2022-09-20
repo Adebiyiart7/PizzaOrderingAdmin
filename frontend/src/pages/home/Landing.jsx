@@ -1,4 +1,6 @@
 import React from "react";
+
+// LOCAL IMPORTS
 import "./Home.css";
 
 const Landing = () => {

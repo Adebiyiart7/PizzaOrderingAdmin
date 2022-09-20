@@ -1,4 +1,6 @@
 import React from "react";
+
+// LOCAL IMPORTS
 import Layout from "../../layouts/Layout";
 import Header from "../../layouts/header/Header";
 import Content from "./Content";

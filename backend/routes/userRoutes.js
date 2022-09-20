@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+// LOCAL IMPORTS
 const getMe = require("../controllers/userControllers/getMe");
 const loginUser = require("../controllers/userControllers/loginUser");
 const registerUser = require("../controllers/userControllers/registerUser");

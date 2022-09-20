@@ -1,4 +1,6 @@
 import Container from "@mui/material/Container";
+
+// LOCAL IMPORTS
 import PageTitle from "../../components/PageTitle";
 import ProductsDisplay from "../../components/productsDisplay/ProductsDisplay";
 import Landing from "./Landing";

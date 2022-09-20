@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+// LOCAL IMPORTS
 const addProduct = require("../controllers/productControllers/addProduct");
 const deleteProduct = require("../controllers/productControllers/deleteProduct");
 const getProduct = require("../controllers/productControllers/getProducts");

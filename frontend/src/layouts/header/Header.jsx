@@ -1,4 +1,5 @@
 // import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { Link } from "react-router-dom";
 import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined";
 import CookieOutlinedIcon from "@mui/icons-material/CookieOutlined";
 import { GiFullPizza, GiSandwich, GiWineGlass } from "react-icons/gi";
@@ -6,8 +7,9 @@ import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
+
+// LOCAL IMPORTS
 import logo from "../../assets/images/logo.png";
-import { Link } from "react-router-dom";
 import "./Header.css";
 
 const HideOnScroll = ({ children, window }) => {

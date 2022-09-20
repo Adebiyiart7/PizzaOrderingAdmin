@@ -1,10 +1,13 @@
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("./config/db");
-const { errorMiddleware } = require("./middleware/errorMiddleware");
 const dotenv = require("dotenv").config();
 const port = process.env.PORT;
 
+// LOCAL IMPORTS
+const connectDB = require("./config/db");
+const { errorMiddleware } = require("./middleware/errorMiddleware");
+
+// initialzed an express app
 const app = express();
 
 // connect database

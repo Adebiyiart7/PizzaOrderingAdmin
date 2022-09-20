@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 
+// LOCAL IMPORTS
 const Product = require("../../models/productModel");
 const checkIsAdmin = require("../../utilities/checkIsAdmin");
 const addProductValidator = require("../../utilities/validators/addProductValidator");
