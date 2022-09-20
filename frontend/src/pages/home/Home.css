@@ -8,28 +8,37 @@ div.landing {
   background-position: center;
   color: #fff;
   text-align: center;
+  text-shadow: 1px 5px 5px black;
+}
+
+div.landing h1.text-zero {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: 300;
 }
 
 div.landing h1.text-one {
   margin: 0;
   font-size: 5em;
-  text-shadow: 1px 5px 5px black;
 }
 
 div.landing h3.text-two {
-  margin: 0.5em 0 0 0;
+  margin: 1em 0 0 0;
   font-weight: 300;
   font-size: 1.5em;
-  -webkit-text-stroke-width: thin;
-  text-shadow: 1px 5px 5px black;
-  font-variant: small-caps;
 }
+
 div.landing h3.text-three {
   margin: 0;
   font-size: 3em;
-  text-shadow: 1px 5px 5px black;
+
   font-weight: 600;
   text-transform: uppercase;
+}
+
+div.landing h3.text-four {
+  margin: 0.5em 0 0 0;
+  color: var(--primaryYellow);
 }
 
 @media screen and (max-width: 600px) {
@@ -43,5 +52,51 @@ div.landing h3.text-three {
     background-position-x: right;
     color: #fff;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  div.landing {
+    padding: 9em 0 0 0;
+    height: 20em;
+  }
+
+  div.landing h3.text-two {
+    font-size: 1.6em;
+  }
+
+  div.landing h3.text-three {
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+
+  div.landing h3.text-four {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  div.landing h1.text-one {
+      font-size: 4em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+  div.landing {
+    padding: 9em 0 0 0;
+    height: 20em;
+  }
+
+  div.landing h1.text-one {
+    font-size: 3em;
+  }
+
+  div.landing h3.text-two {
+    font-size: 1.4em;
+  }
+
+  div.landing h3.text-three {
+    font-size: 1.6em;
+    font-weight: 600;
   }
 }

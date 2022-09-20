@@ -1,7 +1,7 @@
-import Container from "@mui/material/Container";
+
 
 // LOCAL IMPORTS
-import PageTitle from "../../components/PageTitle";
+import PageTitle from "../../components/pageTitle/PageTitle";
 import ProductsDisplay from "../../components/productsDisplay/ProductsDisplay";
 import Landing from "./Landing";
 
@@ -9,7 +9,7 @@ const Content = () => {
   return (
     <>
       <Landing />
-      <div style={{margin: ".8em"}}>
+      <div>
         <PageTitle text="Popular Fast Foods" />
         <p style={{ maxWidth: 500, textAlign: "center", margin: "auto" }}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta,

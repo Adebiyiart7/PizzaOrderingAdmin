@@ -1,6 +1,6 @@
-import { Container } from "@mui/material";
 import Grid from "@mui/material/Grid";
 
+// LOCAL IMPORTS
 import "../productsDisplay/ProductsDisplay.css";
 
 const Side = () => {
@@ -19,79 +19,14 @@ const ProductsDisplay = () => {
   return (
     <div className="products-display">
       <div className="products-list">
-        <Grid container spacing={3}>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 1
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 2
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 3
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 4
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 5
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 6
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 7
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 8
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 9
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 10
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 11
-            </div>
-          </Grid>
-          <Grid xs={12} md={6} className="product">
-            <div className="inner">
-
-            Item 12
-            </div>
-          </Grid>
+        <Grid container>
+          {Array.from(Array(6)).map((_, index) => (
+            <Grid className="product" xs={12} md={6} key={index}>
+              <div style={{ border: "1px solid blue", margin: "8px 16px" }}>
+                xs=2
+              </div>
+            </Grid>
+          ))}
         </Grid>
       </div>
       <div className="right-aside">

@@ -1,24 +1,18 @@
 div.products-display {
   display: flex;
-  /* justify-content: space-between; */
+  margin-top: 50px;
 }
 
 div.products-display .products-list {
   width: 100%;
   max-width: 1000px;
-  margin: auto;
-  margin-top: 50px;
+  margin: 0 auto;
 }
 
 div.products-display .products-list .product {
   width: 100%;
   max-width: 500px;
   margin: auto;
-}
-
-div.products-display .products-list .product .inner {
-  margin: 10px;
-  border: 1px solid red;
 }
 
 div.products-display div.right-aside {
