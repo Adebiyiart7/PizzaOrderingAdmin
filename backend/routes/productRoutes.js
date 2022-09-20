@@ -1,10 +1,11 @@
 const express = require("express");
+const router = express.Router();
+
 const addProduct = require("../controllers/productControllers/addProduct");
 const deleteProduct = require("../controllers/productControllers/deleteProduct");
 const getProduct = require("../controllers/productControllers/getProducts");
 const updateProduct = require("../controllers/productControllers/updateProduct");
 const protect = require("../middleware/authMiddleware");
-const router = express.Router();
 
 router.get("/", getProduct); // getProduct route
 router.post("/add", protect, addProduct); // addProduct route

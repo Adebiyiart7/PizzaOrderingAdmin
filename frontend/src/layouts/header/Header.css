@@ -1,0 +1,70 @@
+nav.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.top-nav .top-nav-left {
+  display: flex;
+  align-items: center;
+}
+
+nav.top-nav ul {
+  display: flex;
+}
+
+nav.top-nav ul li.list-item {
+  list-style: none;
+}
+
+nav.top-nav ul a {
+  text-decoration: none;
+  padding: 0.375em 0.75em;
+  margin: 0 0.5em;
+  border-radius: 0.3em;
+}
+
+nav.top-nav ul a li.list-item {
+  color: #fff;
+  font-weight: 700;
+}
+
+nav.top-nav ul a.cart {
+  background-color: var(--primaryColor);
+}
+
+/* MENU */
+nav.top-nav-menu ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+nav.top-nav-menu ul li.list-item {
+  list-style: none;
+}
+
+nav.top-nav-menu ul li {
+  text-decoration: none;
+  padding: 0.6em 1.2em;
+  margin: 0;
+  transition: 0.6s;
+}
+
+nav.top-nav-menu ul li:hover {
+  background-color: var(--primaryColor);
+  transition: 0.6s;
+}
+
+nav.top-nav-menu ul li.list-item {
+  color: #fff;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+nav.top-nav-menu .list-item .menu-item-text {
+  font-weight: "inherit";
+  font-family: cursive;
+  vertical-align: super;
+
+}

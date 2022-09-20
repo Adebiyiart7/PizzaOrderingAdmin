@@ -1,0 +1,47 @@
+div.landing {
+  background-image: url(../../assets/images/landing_img.jpg);
+  background-attachment: fixed;
+  width: 100vw;
+  height: 30em;
+  padding: 15em 0 0 0;
+  display: inline-block;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+}
+
+div.landing h1.text-one {
+  margin: 0;
+  font-size: 5em;
+  text-shadow: 1px 5px 5px black;
+}
+
+div.landing h3.text-two {
+  margin: 0.5em 0 0 0;
+  font-weight: 300;
+  font-size: 1.5em;
+  -webkit-text-stroke-width: thin;
+  text-shadow: 1px 5px 5px black;
+  font-variant: small-caps;
+}
+div.landing h3.text-three {
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 1px 5px 5px black;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  div.landing {
+    background-image: url(../../assets/images/landing_img.jpg);
+    background-attachment: fixed;
+    width: 100vw;
+    height: 30em;
+    display: inline-block;
+    background-position-y: top;
+    background-position-x: right;
+    color: #fff;
+    text-align: center;
+  }
+}
