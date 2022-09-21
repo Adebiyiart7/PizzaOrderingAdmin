@@ -77,13 +77,13 @@ const RegisterContent = () => {
     <div>
       <OtherPageLanding title="Register" />
       <Breadcrumbs className="breadcrumbs" aria-label="breadcrumb">
-        <Link underline="hover" color="var(--dimBreadCrumbTxt)" href="/">
+        <Link underline="hover" color="var(--dimBreadCrumbTxt)" to="/">
           Home
         </Link>
         <Link
           underline="hover"
           color="inherit"
-          href="/register"
+          to="/register"
           aria-current="page"
         >
           Register
