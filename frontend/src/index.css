@@ -2,8 +2,11 @@
   /* COLOR */
   --tranparentBlack: #050505cc;
   --primaryColor: #e60000;
+  --primaryColorDeep: #c30000;
   --primaryText: #000;
   --primaryYellow: #e9e966;
+  --primaryBlue: #1565c0;
+  --dimBreadCrumbTxt: #ddcaca;
 }
 
 body {
@@ -19,4 +22,22 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.breadcrumbs {
+  background-color: var(--primaryColor);
+  color: #fff !important;
+  padding: 1em 4em;
+  font-family: inherit !important;
+}
+
+@media screen and (max-width: 600px) {
+  .breadcrumbs {
+    padding: .8em 1em;
+    }
 }

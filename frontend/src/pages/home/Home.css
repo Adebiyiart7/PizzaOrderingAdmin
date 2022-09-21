@@ -31,13 +31,15 @@ div.landing h3.text-two {
 div.landing h3.text-three {
   margin: 0;
   font-size: 3em;
-
+  font-family: cursive;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 div.landing h3.text-four {
   margin: 0.5em 0 0 0;
+  font-size: 2em;
+  font-weight: 400;
   color: var(--primaryYellow);
 }
 
@@ -66,19 +68,19 @@ div.landing h3.text-four {
   }
 
   div.landing h3.text-three {
-    font-size: 1.8em;
+    font-size: 2.1em;
     font-weight: 600;
   }
 
   div.landing h3.text-four {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
 }
 
 @media screen and (max-width: 800px) {
   div.landing h1.text-one {
-      font-size: 4em;
-    }
+    font-size: 4em;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -96,7 +98,12 @@ div.landing h3.text-four {
   }
 
   div.landing h3.text-three {
-    font-size: 1.6em;
-    font-weight: 600;
+    font-weight: 400;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  div.landing h3.text-three {
+    font-size: 1.5em;
   }
 }

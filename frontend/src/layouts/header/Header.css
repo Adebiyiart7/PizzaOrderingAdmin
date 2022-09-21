@@ -36,7 +36,7 @@ nav.top-nav ul a li.list-item {
 
 nav.top-nav a.cart {
   position: fixed;
-  bottom: 50px;
+  top: 100px;
   right: 16px;
   text-decoration: none;
   padding: 0.7em 0.7em 0.5em 0.7em;

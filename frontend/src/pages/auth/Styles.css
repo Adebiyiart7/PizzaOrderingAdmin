@@ -1,0 +1,42 @@
+form.auth-form div {
+  display: block;
+  margin: auto;
+  max-width: 280px;
+}
+
+form.auth-form div input {
+  width: unset;
+}
+
+form.auth-form div label.label {
+  display: block;
+  font-size: 1.1em;
+  margin: 1em 0 .4em 0;
+  font-weight: 500;
+}
+
+form.auth-form div.other-auth-actions {
+  margin-top: .5em;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+}
+
+form.auth-form div.other-auth-actions a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--primaryBlue);
+}
+
+form.auth-form div .button {
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  padding: .6em 0;
+  font-weight: 600;
+  font-family: inherit !important;
+}
+
+form.auth-form div .button:hover {
+  background-color: var(--primaryColorDeep);
+}
