@@ -52,6 +52,8 @@ const HideAppBar = (props) => {
       setShowListItems(true);
     }
   };
+  
+  let cartCount = 0;
 
   return (
     <>
@@ -90,10 +92,11 @@ const HideAppBar = (props) => {
                     <li className="list-item">Register</li>
                   </Link>
                 </ul>
-
-                <Link className="cart" to="/cart">
-                  <Cart />
-                </Link>
+                {cartCount > 0 && (
+                  <Link className="cart" to="/cart">
+                    <Cart count={cartCount} />
+                  </Link>
+                )}
                 <span className="hamburger" onClick={onClickHamburger}>
                   <MdMenu size={30} color="var(--primaryYellow)" />
                 </span>

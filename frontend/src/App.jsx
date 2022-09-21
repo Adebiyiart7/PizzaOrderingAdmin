@@ -1,8 +1,10 @@
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Register from "./pages/auth/Register";
 
 // LOCAL IMPORTS
 import Home from "./pages/home/Home";
+import Register from "./pages/auth/Register";
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
+      <ToastContainer />
     </>
   );
 }

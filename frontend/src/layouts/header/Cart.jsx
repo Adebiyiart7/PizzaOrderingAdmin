@@ -1,10 +1,10 @@
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const Cart = () => {
+const Cart = ({count}) => {
   return (
     <li className="list-item top-nav-cart">
       <ShoppingCartOutlinedIcon color="inherit" />
-      <span className="cart-count">0</span>
+      <span className="cart-count">{count}</span>
     </li>
   );
 };

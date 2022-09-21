@@ -45,6 +45,7 @@ nav.top-nav a.cart {
   font-weight: 700;
   list-style: none;
   background-color: var(--primaryColor);
+ 
 }
 
 nav.top-nav a.cart .cart-count {

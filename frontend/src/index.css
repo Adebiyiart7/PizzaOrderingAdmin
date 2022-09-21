@@ -7,6 +7,15 @@
   --primaryYellow: #e9e966;
   --primaryBlue: #1565c0;
   --dimBreadCrumbTxt: #ddcaca;
+
+  /* zINDEXES */
+  --zIndex: 1100;
+  --zIndex1: 1101;
+  --zIndex2: 1102;
+  --zIndex3: 1103;
+  --zIndex4: 1104;
+  --zIndex5: 1105;
+  --zIndex6: 1106;
 }
 
 body {
@@ -38,6 +47,6 @@ a {
 
 @media screen and (max-width: 600px) {
   .breadcrumbs {
-    padding: .8em 1em;
-    }
+    padding: 0.8em 1em;
+  }
 }

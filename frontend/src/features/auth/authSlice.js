@@ -1,5 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+// LOCAL IMPORTS
+import authService from "./authService";
+
 const user = JSON.parse(localStorage.getItem("user"));
 
 // INITIALIZE AUTH STATE VARIABLES
@@ -32,16 +35,30 @@ export const register = createAsyncThunk(
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: (state) => {
-    reset: {
+  reducers: {
+    reset: (state) => {
       state.isError = false;
       state.isSuccess = false;
       state.isLoading = false;
       state.message = false;
-    }
+    },
   },
   extraReducers: (builder) => {
-    builder.addCase().addCase().addCase().addCase();
+    builder
+      .addCase(register.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(register.fulfilled, (state, actions) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.user = actions.payload;
+      })
+      .addCase(register.rejected, (state, actions) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.user = null;
+        state.message = actions.payload;
+      });
   },
 });
 
