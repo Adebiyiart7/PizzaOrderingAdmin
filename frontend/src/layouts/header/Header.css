@@ -34,6 +34,14 @@ nav.top-nav ul a li.list-item {
   font-weight: 700;
 }
 
+nav.top-nav ul a.logout {
+  background-color: var(--primaryColor) !important;
+  padding: 0.4em 0.8em 0.5em 0.8em;
+  border-radius: 0.3em;
+  max-width: 60px;
+  justify-content: center;
+}
+
 nav.top-nav a.cart {
   position: fixed;
   top: 100px;
@@ -45,7 +53,6 @@ nav.top-nav a.cart {
   font-weight: 700;
   list-style: none;
   background-color: var(--primaryColor);
- 
 }
 
 nav.top-nav a.cart .cart-count {
@@ -95,7 +102,6 @@ nav.top-nav-menu ul li.list-item .menu-item-text {
 
 nav.top-nav-menu .list-item .menu-item-text {
   font-weight: "inherit";
-  font-family: cursive;
 }
 
 @media screen and (max-width: 1000px) {
@@ -105,9 +111,9 @@ nav.top-nav-menu .list-item .menu-item-text {
 }
 
 @media screen and (max-width: 900px) {
-  nav.top-nav ul a {
+  /* nav.top-nav ul a {
     margin: 0 0.2em;
-  }
+  } */
 
   /* MENU */
   nav.top-nav-menu ul li.list-item {
@@ -124,9 +130,9 @@ nav.top-nav-menu .list-item .menu-item-text {
     padding: 0;
   }
 
-  nav.top-nav ul a {
+  /* nav.top-nav ul a {
     margin: 0 0.2em;
-  }
+  } */
 
   nav.top-nav ul {
     padding-left: 0;
@@ -156,12 +162,16 @@ nav.top-nav-menu .list-item .menu-item-text {
   }
 
   nav.top-nav ul {
-    margin: 0 0 0 10px;
+    padding: 0 0 0 10px;
     display: none;
   }
 
+  nav.top-nav ul a,
   nav.top-nav ul a {
-    margin: 0 0.2em;
+    display: flex;
+    padding: .5em 0;
+    border-radius: 0;
+    margin: 0em;
   }
 
   nav.top-nav ul a li.list-item {

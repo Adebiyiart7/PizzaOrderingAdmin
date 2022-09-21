@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LunchDiningOutlinedIcon from "@mui/icons-material/LunchDiningOutlined";
 import CookieOutlinedIcon from "@mui/icons-material/CookieOutlined";
 import { GiFullPizza, GiSandwich, GiWineGlass } from "react-icons/gi";
@@ -7,11 +7,13 @@ import AppBar from "@mui/material/AppBar";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import { MdMenu } from "react-icons/md";
+import { useSelector, useDispatch } from "react-redux";
 
 // LOCAL IMPORTS
 import logo from "../../assets/images/logo.png";
 import "./Header.css";
 import Cart from "./Cart";
+import { logout, reset } from "../../features/auth/authSlice";
 
 const HideOnScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({
@@ -38,6 +40,10 @@ const Menu = ({ children, window }) => {
 };
 
 const HideAppBar = (props) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
+
   const [showListItems, setShowListItems] = useState(true);
   const onClickHamburger = () => {
     let el1 = document.querySelector(".top-nav-list-items");
@@ -52,7 +58,13 @@ const HideAppBar = (props) => {
       setShowListItems(true);
     }
   };
-  
+
+  const onLogout = () => {
+    dispatch(logout());
+    dispatch(reset());
+    navigate("/login");
+  };
+
   let cartCount = 0;
 
   return (
@@ -85,12 +97,22 @@ const HideAppBar = (props) => {
               </div>
               <div className="top-nav-right">
                 <ul className="top-nav-auth-items">
-                  <Link to="/login">
-                    <li className="list-item">Login</li>
-                  </Link>
-                  <Link to="/register">
-                    <li className="list-item">Register</li>
-                  </Link>
+                  {user ? (
+                    <>
+                      <Link className="logout" to="/login" onClick={onLogout}>
+                        <li className="list-item">Logout</li>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/login">
+                        <li className="list-item">Login</li>
+                      </Link>
+                      <Link to="/register">
+                        <li className="list-item">Register</li>
+                      </Link>
+                    </>
+                  )}
                 </ul>
                 {cartCount > 0 && (
                   <Link className="cart" to="/cart">
