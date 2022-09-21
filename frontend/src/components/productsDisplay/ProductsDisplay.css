@@ -80,10 +80,14 @@ div.products-display .products-list .product .inner .description {
   margin: 0;
 }
 
+div.products-display .products-list .product .inner .description {
+  color: var(--lightText);
+}
+
 div.products-display .products-list .product .inner .footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.7em;
+  margin-top: 0.5em;
 }
 
 div.products-display .products-list .product .inner .button {
@@ -153,7 +157,7 @@ div.products-display div.right-aside {
   div.products-display .products-list .product .inner .description {
     margin-top: 5px;
     line-height: 1.2;
-    font-size: 14.5px;
+    font-size: 13px;
   }
 
     div.products-display .products-list .product .inner .price {
