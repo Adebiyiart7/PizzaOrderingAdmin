@@ -1,5 +1,6 @@
 div.landing {
   background-image: url(../../assets/images/landing_img.jpg);
+  background-color: var(--primaryBlue);
   background-attachment: fixed;
   width: 100vw;
   height: 30em;
