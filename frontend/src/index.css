@@ -8,6 +8,9 @@
   --primaryBlue: #1565c0;
   --dimBreadCrumbTxt: #ddcaca;
 
+  /* BORDER */
+  --lightBorder: rgba(0, 0, 0, 0.15);
+
   /* zINDEXES */
   --zIndex: 1100;
   --zIndex1: 1101;

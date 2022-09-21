@@ -2,6 +2,7 @@ import Grid from "@mui/material/Grid";
 
 // LOCAL IMPORTS
 import "../productsDisplay/ProductsDisplay.css";
+import Product from "./Product";
 
 const Side = () => {
   return (
@@ -20,11 +21,9 @@ const ProductsDisplay = () => {
     <div className="products-display">
       <div className="products-list">
         <Grid container>
-          {Array.from(Array(6)).map((_, index) => (
+          {Array.from(Array(16)).map((_, index) => (
             <Grid className="product" xs={12} md={6} item key={index}>
-              <div style={{ border: "1px solid blue", margin: "8px 16px" }}>
-                xs=2
-              </div>
+              <Product />
             </Grid>
           ))}
         </Grid>
