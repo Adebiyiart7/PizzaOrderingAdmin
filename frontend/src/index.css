@@ -3,8 +3,9 @@
   --tranparentBlack: #050505cc;
   --primaryColor: #e60000;
   --primaryColorDeep: #c30000;
-  --primaryText: #000;
-  --lightText: #1f1f1f;
+  --primaryText: rgb(28, 30, 33);
+  --lightText: rgb(103, 104, 131);
+  /* --lightText: #3c3c3c; */
   --primaryYellow: #e9e966;
   --primaryBlue: #1565c0;
   --dimBreadCrumbTxt: #ddcaca;

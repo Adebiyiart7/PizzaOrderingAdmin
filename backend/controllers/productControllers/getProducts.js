@@ -12,6 +12,7 @@ const getProduct = asyncHandler(async (req, res) => {
   let query = { available: true };
   try {
     let products = await Product.find(query, {
+      name: 1,
       price: 1,
       category: 1,
       available: 1,

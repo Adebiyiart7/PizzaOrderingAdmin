@@ -20,18 +20,6 @@
   }
 }
 
-/* @media screen and (max-width: 450px) {
-  :root {
-    --productInnerHeight: 8em;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  :root {
-    --productInnerHeight: 8em;
-  }
-} */
-
 div.products-display {
   display: flex;
   margin-top: 50px;
@@ -51,7 +39,6 @@ div.products-display .products-list .product {
 
 div.products-display .products-list .product .inner {
   display: flex;
-  /* flex: 100%; */
   height: var(--productInnerHeight);
   margin: 0.5em 1em;
   border: 1px solid var(--lightBorder);
@@ -70,7 +57,7 @@ div.products-display .products-list .product .inner:hover .button {
 }
 
 div.products-display .products-list .product .inner .right {
-  /* flex: 65%; */
+  width: 100%;
   padding: 10px;
 }
 
@@ -80,8 +67,16 @@ div.products-display .products-list .product .inner .description {
   margin: 0;
 }
 
+div.products-display .products-list .product .inner .name {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 97%;
+  text-overflow: ellipsis;
+}
+
 div.products-display .products-list .product .inner .description {
   color: var(--lightText);
+  font-size: 0.875em;
 }
 
 div.products-display .products-list .product .inner .footer {
@@ -133,7 +128,6 @@ div.products-display div.right-aside {
 @media screen and (max-width: 450px) {
   div.products-display .products-list .product .inner .description {
     line-height: 1.2;
-    font-size: 1em;
   }
 
   div.products-display .products-list .product .inner .button {
@@ -143,15 +137,19 @@ div.products-display div.right-aside {
 }
 
 @media screen and (max-width: 340px) {
+  div.products-display .products-list .product .inner .name {
+    font-size: 1rem;
+  }
+
   div.products-display .products-list .product .inner .description {
     margin-top: 5px;
     line-height: 1.2;
-    font-size: 13px;
+    font-size: 0.85em;
   }
 
-    div.products-display .products-list .product .inner .price {
-      font-size: 1em;
-    }
+  div.products-display .products-list .product .inner .price {
+    font-size: 1em;
+  }
 
   div.products-display .products-list .product .inner .button {
     padding: 0.3em 0.4em;
