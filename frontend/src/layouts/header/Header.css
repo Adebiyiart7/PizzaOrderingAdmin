@@ -127,7 +127,7 @@ nav.top-nav-menu .list-item .menu-item-text {
 
 @media screen and (max-width: 800px) {
   nav.top-nav {
-    padding: 0;
+    padding: 0 .5em;
   }
 
   /* nav.top-nav ul a {
@@ -192,7 +192,7 @@ nav.top-nav-menu .list-item .menu-item-text {
     position: absolute;
     display: inline-flex;
     top: 14px;
-    right: 16px;
+    right: 24px;
   }
 
   /* MENU */

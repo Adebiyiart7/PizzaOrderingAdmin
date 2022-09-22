@@ -15,6 +15,7 @@ import "./Header.css";
 import Cart from "./Cart";
 import { logout, reset } from "../../features/auth/authSlice";
 import { setProductQuery } from "../../features/products/productSlice";
+import { setDisplayMenuBar } from "../../features/app/appSlice";
 
 const HideOnScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({
@@ -44,6 +45,7 @@ const HideAppBar = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user } = useSelector((state) => state.auth);
+  const { displayMenuBar } = useSelector((state) => state.app);
 
   const [showListItems, setShowListItems] = useState(true);
   const onClickHamburger = () => {
@@ -69,6 +71,23 @@ const HideAppBar = (props) => {
   const setFilter = (filter) => {
     dispatch(setProductQuery(`?category=${filter}`));
   };
+
+  let showMenuBar = "initial";
+  const showOrHideMenuBar = () => {
+    const current_pathname = window.location.pathname;
+    const pathnames = ["/"];
+
+    if (pathnames.includes(current_pathname)) {
+      dispatch(setDisplayMenuBar(true));
+    } else {
+      dispatch(setDisplayMenuBar(false));
+    }
+
+    if (displayMenuBar === false) {
+      showMenuBar = "none";
+    }
+  };
+  showOrHideMenuBar();
 
   let cartCount = 0;
 
@@ -135,7 +154,11 @@ const HideAppBar = (props) => {
       <Menu {...props}>
         <AppBar
           elevation={0}
-          sx={{ width: "100vw", backgroundColor: "var(--tranparentBlack)" }}
+          sx={{
+            width: "100vw",
+            backgroundColor: "var(--tranparentBlack)",
+            display: showMenuBar,
+          }}
         >
           <div>
             <nav className="top-nav-menu">
@@ -144,7 +167,6 @@ const HideAppBar = (props) => {
                   onClick={() => {
                     setFilter("pizza");
                   }}
-                  style={{ backgroundColor: "var(--primaryColor)" }}
                   className="list-item"
                 >
                   <GiFullPizza size="1em" />

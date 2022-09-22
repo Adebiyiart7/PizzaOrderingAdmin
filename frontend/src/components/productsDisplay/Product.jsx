@@ -13,9 +13,9 @@ const Product = ({ product }) => {
         <h3 className="name">{product.name}</h3>
         <p className="description">
           {window.innerWidth <= 425
-            ? product.description.length <= 40
+            ? product.description.length <= 33
               ? product.description
-              : `${product.description.slice(0, 40)}...`
+              : `${product.description.slice(0, 33)}...`
             : product.description}
         </p>
         <div className="footer">

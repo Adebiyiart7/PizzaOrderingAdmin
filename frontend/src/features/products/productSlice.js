@@ -36,14 +36,6 @@ export const setProductQuery = createAsyncThunk(
   }
 );
 
-// const productQuery = createSlice({
-//   name: "productQuery",
-//   initialState: "?category=pizza",
-//   reducers: {
-//     reset: () => "?category=pizza",
-//   },
-// });
-
 const productSlice = createSlice({
   name: "product",
   initialState,

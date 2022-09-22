@@ -42,18 +42,25 @@ div.landing h3.text-four {
   color: var(--primaryYellow);
 }
 
-@media screen and (max-width: 600px) {
-  div.landing {
-    background-image: url(../../assets/images/landing_img.jpg);
-    background-attachment: fixed;
-    width: 100vw;
-    height: 30em;
-    display: inline-block;
-    background-position-y: top;
-    background-position-x: right;
-    color: #fff;
-    text-align: center;
-  }
+div.delivery-methods {
+  display: flex;
+  justify-content: space-around;
+  max-width: 900px;
+  margin: auto;
+}
+
+div.delivery-methods .order,
+div.delivery-methods .delivery,
+div.delivery-methods .location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+div.delivery-methods img:first-child {
+  height: 50px;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -79,10 +86,30 @@ div.landing h3.text-four {
   div.landing h1.text-one {
     font-size: 4em;
   }
+
+  div.delivery-methods {
+    display: initial;
+  }
+
+  div.delivery-methods .order,
+  div.delivery-methods .delivery,
+  div.delivery-methods .location {
+    flex-direction: column;
+    align-items: center;margin-bottom: 2em;
+  }
 }
 
 @media screen and (max-width: 600px) {
   div.landing {
+    background-image: url(../../assets/images/landing_img.jpg);
+    background-attachment: fixed;
+    width: 100vw;
+    height: 30em;
+    display: inline-block;
+    background-position-y: top;
+    background-position-x: right;
+    color: #fff;
+    text-align: center;
     padding: 9em 0 0 0;
     height: 20em;
   }
