@@ -111,9 +111,9 @@ div.products-display .products-list .inner img {
   border-bottom-left-radius: 4px;
 }
 
-/* div.products-display div.right-aside {
+div.products-display div.right-aside {
   border: 1px solid red;
-} */
+}
 
 @media screen and (max-width: 1200px) {
   div.products-display div.right-aside {
