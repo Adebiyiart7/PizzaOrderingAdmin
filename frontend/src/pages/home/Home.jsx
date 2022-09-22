@@ -1,5 +1,3 @@
-
-
 // LOCAL IMPORTS
 import Layout from "../../layouts/Layout";
 import Header from "../../layouts/header/Header";

@@ -10,6 +10,12 @@ const Product = require("../../models/productModel");
  */
 const getProduct = asyncHandler(async (req, res) => {
   let query = { available: true };
+
+  if (req.query) {
+    query = { ...query, ...req.query };
+    console.log(query);
+  }
+
   try {
     let products = await Product.find(query, {
       name: 1,

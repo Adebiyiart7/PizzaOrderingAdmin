@@ -1,5 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import productService from "./productService";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
@@ -7,14 +7,15 @@ const initialState = {
   isSuccess: false,
   isError: false,
   message: "",
+  productQuery: "/",
 };
 
 // GET PRODUCTS
 export const getProducts = createAsyncThunk(
   "products/getProducts",
-  async (_, thunkAPI) => {
+  async (query, thunkAPI) => {
     try {
-      return await productService.getProducts();
+      return await productService.getProducts(query);
     } catch (error) {
       const message =
         (error.response &&
@@ -26,6 +27,22 @@ export const getProducts = createAsyncThunk(
     }
   }
 );
+
+// SET PRODUCT QUERY
+export const setProductQuery = createAsyncThunk(
+  "product/setQuery",
+  async (query) => {
+    return query;
+  }
+);
+
+// const productQuery = createSlice({
+//   name: "productQuery",
+//   initialState: "?category=pizza",
+//   reducers: {
+//     reset: () => "?category=pizza",
+//   },
+// });
 
 const productSlice = createSlice({
   name: "product",
@@ -52,6 +69,9 @@ const productSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = actions.payload;
+      })
+      .addCase(setProductQuery.fulfilled, (state, actions) => {
+        state.productQuery = actions.payload;
       });
   },
 });

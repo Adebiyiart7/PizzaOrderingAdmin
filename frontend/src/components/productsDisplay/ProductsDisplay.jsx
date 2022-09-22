@@ -22,7 +22,7 @@ const Side = () => {
 
 const ProductsDisplay = () => {
   const dispatch = useDispatch();
-  const { products, isLoading, isError, message } = useSelector(
+  const { products, isLoading, isError, message, productQuery } = useSelector(
     (state) => state.product
   );
 
@@ -31,23 +31,23 @@ const ProductsDisplay = () => {
       toast.error(message);
     }
 
-    dispatch(getProducts());
+    dispatch(getProducts(productQuery));
 
     return () => {
       dispatch(reset());
     };
-  }, [isError, message, dispatch]);
+  }, [isError, message, dispatch, productQuery]);
 
   if (isLoading) {
-    return console.log("Loading...")
+    return console.log("Loading...");
   }
 
   return (
     <div className="products-display">
       <div className="products-list">
         <Grid container>
-          {products.map((product, index) => (
-            <Grid className="product" xs={12} md={6} item key={product.id}>
+          {products.map((product) => (
+            <Grid className="product" xs={12} md={6} item key={product._id}>
               <Product product={product} />
             </Grid>
           ))}

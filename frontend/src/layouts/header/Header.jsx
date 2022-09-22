@@ -14,6 +14,7 @@ import logo from "../../assets/images/logo.png";
 import "./Header.css";
 import Cart from "./Cart";
 import { logout, reset } from "../../features/auth/authSlice";
+import { setProductQuery } from "../../features/products/productSlice";
 
 const HideOnScroll = ({ children, window }) => {
   const trigger = useScrollTrigger({
@@ -63,6 +64,10 @@ const HideAppBar = (props) => {
     dispatch(logout());
     dispatch(reset());
     navigate("/login");
+  };
+
+  const setFilter = (filter) => {
+    dispatch(setProductQuery(`?category=${filter}`));
   };
 
   let cartCount = 0;
@@ -136,29 +141,52 @@ const HideAppBar = (props) => {
             <nav className="top-nav-menu">
               <ul>
                 <li
+                  onClick={() => {
+                    setFilter("pizza");
+                  }}
                   style={{ backgroundColor: "var(--primaryColor)" }}
                   className="list-item"
                 >
                   <GiFullPizza size="1em" />
                   <span className="menu-item-text">&nbsp;&nbsp;Pizza</span>
                 </li>
-                <li className="list-item">
+                <li
+                  onClick={() => {
+                    setFilter("burger");
+                  }}
+                  className="list-item"
+                >
                   <LunchDiningOutlinedIcon fontSize="inherit" />
                   <span className="menu-item-text burgers">
                     &nbsp;&nbsp;Burgers
                   </span>
                 </li>
-                <li className="list-item">
+                <li
+                  onClick={() => {
+                    setFilter("dessert");
+                  }}
+                  className="list-item"
+                >
                   <CookieOutlinedIcon fontSize="inherit" />
                   <span className="menu-item-text desserts">
                     &nbsp;&nbsp;Desserts
                   </span>
                 </li>
-                <li className="list-item">
+                <li
+                  onClick={() => {
+                    setFilter("sandwich");
+                  }}
+                  className="list-item"
+                >
                   <GiSandwich size="1em" />
                   <span className="menu-item-text">&nbsp;&nbsp;Sandwiches</span>
                 </li>
-                <li className="list-item">
+                <li
+                  onClick={() => {
+                    setFilter("drink");
+                  }}
+                  className="list-item"
+                >
                   <GiWineGlass size="1em" />
                   <span className="menu-item-text">&nbsp;&nbsp;Drinks</span>
                 </li>
