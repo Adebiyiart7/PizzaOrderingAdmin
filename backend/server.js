@@ -40,3 +40,20 @@ app.listen(port, () => console.log(`Server running on port ${port}`));
  * Delete Product, check if user is an admin
  *
  */
+
+console.log("Learning JavaScript");
+
+class Animal {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  eat() {
+    console.log(`${this.name} can eat.`);
+  }
+}
+
+const animal = new Animal("Whiz", 23);
+
+animal.eat();

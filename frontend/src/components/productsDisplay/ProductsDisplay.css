@@ -39,7 +39,7 @@ div.products-display .products-list .product {
 
 div.products-display .products-list .product .inner {
   display: flex;
-  height: var(--productInnerHeight);
+  height: var(--productInnerHeight);background-color: #FFF;
   margin: 0.5em 1em;
   border: 1px solid var(--lightBorder);
   border-radius: 4px;

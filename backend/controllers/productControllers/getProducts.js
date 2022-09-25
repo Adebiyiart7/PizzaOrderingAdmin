@@ -13,7 +13,6 @@ const getProduct = asyncHandler(async (req, res) => {
 
   if (req.query) {
     query = { ...query, ...req.query };
-    console.log(query);
   }
 
   try {

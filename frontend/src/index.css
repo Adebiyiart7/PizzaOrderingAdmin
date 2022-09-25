@@ -1,17 +1,18 @@
 :root {
   /* COLOR */
+  --appBackground: #f1f2f2;
   --tranparentBlack: #050505cc;
   --primaryColor: #e60000;
   --primaryColorDeep: #c30000;
-  --primaryText: rgb(28, 30, 33);
-  --lightText: rgb(103, 104, 131);
+  --primaryText: #1c1e21;
+  --lightText: #676883;
   /* --lightText: #3c3c3c; */
   --primaryYellow: #e9e966;
   --primaryBlue: #1565c0;
   --dimBreadCrumbTxt: #ddcaca;
 
   /* BORDER */
-  --lightBorder: rgba(0, 0, 0, 0.15);
+  --lightBorder: #e1e8ed;
 
   /* zINDEXES */
   --zIndex: 1100;
@@ -31,6 +32,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* background-color: var(--appBackground); */
 }
 
 code {
